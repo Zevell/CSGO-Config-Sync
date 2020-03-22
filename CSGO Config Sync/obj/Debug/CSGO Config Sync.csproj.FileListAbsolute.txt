@@ -1,0 +1,10 @@
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\bin\Debug\CSGO Config Sync.exe.config
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\bin\Debug\CSGO Config Sync.exe
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\bin\Debug\CSGO Config Sync.pdb
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO Config Sync.csprojAssemblyReference.cache
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO_Config_Sync.Main.resources
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO_Config_Sync.Properties.Resources.resources
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO Config Sync.csproj.GenerateResource.cache
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO Config Sync.csproj.CoreCompileInputs.cache
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO Config Sync.exe
+D:\Users\zeval\source\repos\CSGO Config Sync\CSGO Config Sync\obj\Debug\CSGO Config Sync.pdb
