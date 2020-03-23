@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CSGO_Config_Sync
@@ -13,6 +14,8 @@ namespace CSGO_Config_Sync
             InitializeComponent();
             handleSteamPath();
             handleSteamID();
+            this.list_steamUsernames.Visible = false;
+            //populateList();
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -95,12 +98,12 @@ namespace CSGO_Config_Sync
             try
             {
                 updateStatus("Syncing config.");
-                var diSource = new DirectoryInfo(txtbox_steampath.Text + "/userdata/" + txt_steamID.Text + "/");
+                var diSource = new DirectoryInfo(txtbox_steampath.Text + "/userdata/" + txt_steamID.Text + "/730/");
                 var directories = Directory.GetDirectories(this.txtbox_steampath.Text + "/" + "userdata/");
                 foreach (string dir in directories)
                 {
                     Debug.WriteLine(dir);
-                    var diTarget = new DirectoryInfo(dir);
+                    var diTarget = new DirectoryInfo(dir + "/730/");
                     CopyAll(diSource, diTarget);
                 }
                 Debug.WriteLine("File copy complete.");
@@ -147,6 +150,21 @@ namespace CSGO_Config_Sync
                     target.CreateSubdirectory(diSourceSubDir.Name);
                 CopyAll(diSourceSubDir, nextTargetSubDir);
             }
+        }
+
+        private void populateList()
+        {   
+            var directories = Directory.GetDirectories(this.txtbox_steampath.Text + "/" + "userdata/");
+            foreach (string dir in directories)
+            {
+                var username = File.ReadLines(dir + "/config/localconfig.vdf").Skip(23).Take(1).First().Replace("\"", "").Replace("PersonaName", "").Trim();
+                this.list_steamUsernames.Items.Add(username);
+            }
+        }
+
+        private void list_steamUsernames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

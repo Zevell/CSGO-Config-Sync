@@ -35,6 +35,7 @@
             this.btn_sync = new System.Windows.Forms.Button();
             this.lbl_syncwarning = new System.Windows.Forms.Label();
             this.lbl_status = new System.Windows.Forms.Label();
+            this.list_steamUsernames = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtbox_steampath
@@ -104,11 +105,21 @@
             this.lbl_status.TabIndex = 6;
             this.lbl_status.Text = "Status: Idle";
             // 
+            // list_steamUsernames
+            // 
+            this.list_steamUsernames.FormattingEnabled = true;
+            this.list_steamUsernames.Location = new System.Drawing.Point(12, 127);
+            this.list_steamUsernames.Name = "list_steamUsernames";
+            this.list_steamUsernames.Size = new System.Drawing.Size(547, 147);
+            this.list_steamUsernames.TabIndex = 7;
+            this.list_steamUsernames.SelectedIndexChanged += new System.EventHandler(this.list_steamUsernames_SelectedIndexChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 376);
+            this.Controls.Add(this.list_steamUsernames);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.lbl_syncwarning);
             this.Controls.Add(this.btn_sync);
@@ -133,6 +144,7 @@
         private System.Windows.Forms.Button btn_sync;
         private System.Windows.Forms.Label lbl_syncwarning;
         private System.Windows.Forms.Label lbl_status;
+        private System.Windows.Forms.ListBox list_steamUsernames;
     }
 }
 
